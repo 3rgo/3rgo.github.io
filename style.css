@@ -267,3 +267,17 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
+
+#experiences .media h1, #experiences .media h2, #experiences .media h3, #experiences .media h4, #experiences .media h5, #experiences .media h6 {
+    margin: 0 0 20px;
+}
+
+#experiences .media {
+    border-bottom: 1px solid RoyalBlue;
+    margin-bottom: 40px;
+}
+
+#experiences .media:last-child {
+    border-bottom: none;
+    margin-bottom: initial;
+}
