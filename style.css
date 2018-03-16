@@ -281,3 +281,12 @@ img::-moz-selection {
     border-bottom: none;
     margin-bottom: initial;
 }
+
+#technologies .media {
+    width: 100%;
+
+}
+
+#technologies .media .media-body {
+    text-align: left;
+}
