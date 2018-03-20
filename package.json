@@ -11,6 +11,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "favIcon16": "sharp -i ./src/images/icon.png -o ./static/icons/favicon-16x16.png resize 16",
     "favIcon32": "sharp -i ./src/images/icon.png -o ./static/icons/favicon-32x32.png resize 32",
     "favIcon96": "sharp -i ./src/images/icon.png -o ./static/icons/favicon-96x96.png resize 96",
@@ -43,6 +44,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.6.1",
     "gatsby-link": "^1.6.34",
+    "gh-pages": "^1.1.0",
     "prettier": "^1.10.2",
     "sharp-cli": "^1.6.0",
     "webpack-bundle-analyzer": "^2.10.0"
