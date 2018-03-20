@@ -162,7 +162,7 @@ const IndexPage = () => (
 
                         <ul className="list-inline banner-social-buttons">
                             <li className="list-inline-item">
-                                <a href="https://twitter.com/_3rgo" target="_blank" rel="noopener" className="btn btn-default btn-lg">
+                                <a href="https://twitter.com/3rgo_" target="_blank" rel="noopener" className="btn btn-default btn-lg">
                                     <i className="fa fa-twitter fa-fw" aria-hidden="true"></i>
                                     <span className="network-name">Twitter</span>
                                 </a>
