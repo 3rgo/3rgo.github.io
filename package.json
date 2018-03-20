@@ -1,8 +1,9 @@
 {
-  "name": "3rgo/3rgo.github.io",
+  "name": "3rgo.github.io",
   "description": "3rgo.me website",
   "version": "1.0.0",
   "author": "Romain GONÇALVES <romain@3rgo.me>",
+  "type": "project",
   "dependencies": {
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
@@ -17,9 +18,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "prettier": "^1.11.1"
   }
 }
