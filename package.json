@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "3rgo/3rgo.github.io",
+  "description": "3rgo.me website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Romain GONÇALVES <romain@3rgo.me>",
   "dependencies": {
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
@@ -10,7 +10,7 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby react 3rgo"
   ],
   "license": "MIT",
   "scripts": {
