@@ -5,10 +5,12 @@
   "author": "Romain GONÇALVES <romain@3rgo.me>",
   "type": "project",
   "dependencies": {
+    "bootstrap": "4.0.0",
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sass": "^1.0.23",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

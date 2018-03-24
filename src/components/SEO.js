@@ -26,9 +26,7 @@ const SEO = () => {
             <meta property="og:image" content={image} />
             <meta property="og:type" content="website" />
 
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
             <script src="https://use.fontawesome.com/1d6d524a55.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Biryani:400,700" rel="stylesheet" />
 
             <body className="page-top" />
         </Helmet>
