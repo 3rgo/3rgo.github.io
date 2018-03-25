@@ -26,8 +26,6 @@ const SEO = () => {
             <meta property="og:image" content={image} />
             <meta property="og:type" content="website" />
 
-            <script src="https://use.fontawesome.com/1d6d524a55.js"></script>
-
             <body className="page-top" />
         </Helmet>
     );

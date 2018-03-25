@@ -1,5 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faAngleDoubleDown from '@fortawesome/fontawesome-free-solid/faAngleDoubleDown'
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
+
 
 const IndexPage = () => (
     <div>
@@ -11,7 +17,8 @@ const IndexPage = () => (
                             <h1 className="brand-heading">Romain GON&Ccedil;ALVES</h1>
                             <p className="intro-text">Ingénieur en développement Web</p>
                             <a href="#about" className="btn btn-circle js-scroll-trigger">
-                                <i className="fa fa-angle-double-down animated"></i>
+
+                                <FontAwesomeIcon icon={faAngleDoubleDown} />
                             </a>
                         </div>
                     </div>
@@ -163,19 +170,19 @@ const IndexPage = () => (
                         <ul className="list-inline banner-social-buttons">
                             <li className="list-inline-item">
                                 <a href="https://twitter.com/3rgo_" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <i className="fa fa-twitter fa-fw" aria-hidden="true"></i>
+                                    <FontAwesomeIcon icon={faTwitter} fixedWidth/>
                                     <span className="network-name">Twitter</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
                                 <a href="https://github.com/3rgo" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <i className="fa fa-github fa-fw" aria-hidden="true"></i>
+                                    <FontAwesomeIcon icon={faGithub} fixedWidth/>
                                     <span className="network-name">Github</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
                                 <a href="https://www.linkedin.com/in/romain-gonçalves-83214423" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <i className="fa fa-linkedin fa-fw" aria-hidden="true"></i>
+                                    <FontAwesomeIcon icon={faLinkedin} fixedWidth/>
                                     <span className="network-name">LinkedIn</span>
                                 </a>
                             </li>
@@ -189,7 +196,7 @@ const IndexPage = () => (
                 <p className="lead">Copyright &copy; 3rgo.me 2018</p>
                 <p className="font-weight-light">
                     <small>
-                        Built with <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://jquery.com/">jQuery</a>.<br/>
+                        Built with <a href="https://gatsbyjs.org/" target="_blank" rel="noopener">Gatsby</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> and <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>.<br/>
                         Based on <a target="_blank" rel="noopener" href="https://github.com/BlackrockDigital/startbootstrap-grayscale">Greyscale theme by Start Bootstrap</a>
                     </small>
                 </p>
