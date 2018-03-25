@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
+import Navigation from '../components/Navigation'
 import SEO from '../components/SEO'
 
 import './../scss/index.scss'
@@ -10,7 +10,7 @@ import './../scss/index.scss'
 const TemplateWrapper = ({ children }) => (
   <div>
     <SEO />
-    <Header />
+    <Navigation />
     <div>
       {children()}
     </div>
