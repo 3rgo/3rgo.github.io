@@ -26,7 +26,7 @@ const SEO = () => {
             <meta property="og:image" content={image} />
             <meta property="og:type" content="website" />
 
-            <body className="page-top" />
+            <body id="page-top" />
         </Helmet>
     );
 };
