@@ -15,7 +15,8 @@
     "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-sass": "^1.0.23",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "smoothscroll": "^0.4.0"
   },
   "keywords": [
     "gatsby react 3rgo"
