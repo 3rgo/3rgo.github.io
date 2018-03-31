@@ -10,15 +10,23 @@ import SEO from '../components/SEO'
 
 import './../scss/index.scss'
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <SEO />
-    <Navigation />
-    <div>
-      {children()}
-    </div>
-  </div>
-)
+class TemplateWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>
+                <SEO />
+                <Navigation />
+                <div>
+                    {this.props.children()}
+                </div>
+            </div>
+        )
+    }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
