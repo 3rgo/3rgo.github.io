@@ -30,8 +30,9 @@ export default class Navigation extends React.Component {
     }
 
     render() {
+        let cls = this.props.sticky ? "navbar-shrink" : "";
         return (
-            <Navbar light expand="lg" fixed="top" id="mainNav">
+            <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
                 <NavbarBrand href="#page-top">3rgo.me</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="navbar-toggle">
                     Menu&nbsp;
