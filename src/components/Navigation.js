@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import Scrollspy from 'react-scrollspy'
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faBars from '@fortawesome/fontawesome-free-solid/faBars'
@@ -30,7 +31,15 @@ export default class Navigation extends React.Component {
     }
 
     render() {
-        let cls = this.props.sticky ? "navbar-shrink" : "";
+        let cls = this.props.sticky ? "navbar-shrink" : ""
+        let links = {
+            'about' : 'À propos',
+            'technologies' : 'Technologies',
+            'experiences' : 'Expériences',
+            'social' : 'Social'
+        }
+        let collapseNavbar = this.collapseNavbar
+
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
                 <NavbarBrand href="#page-top">3rgo.me</NavbarBrand>
@@ -39,20 +48,15 @@ export default class Navigation extends React.Component {
                     <FontAwesomeIcon icon={faBars} fixedWidth/>
                 </NavbarToggler>
                 <Collapse isOpen={this.state.isOpen} navbar id="navbarResponsive">
-                    <Nav className="navbar-nav ml-auto" navbar>
-                        <NavItem>
-                            <NavLink onClick={this.collapseNavbar} href="#about">&Agrave; propos</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink onClick={this.collapseNavbar} href="#technologies">Technologies</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink onClick={this.collapseNavbar} href="#experiences">Expériences</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink onClick={this.collapseNavbar} href="#social">Social</NavLink>
-                        </NavItem>
-                    </Nav>
+                    <Scrollspy items={ Object.keys(links) } currentClassName="active" componentTag={Nav} className="navbar-nav ml-auto" navbar>
+                        {
+                            Object.keys(links).map(hash => (
+                                <NavItem>
+                                    <NavLink onClick={collapseNavbar} href={"#" + hash}>{links[hash]}</NavLink>
+                                </NavItem>
+                            ))
+                        }
+                    </Scrollspy>
                 </Collapse>
             </Navbar>
         )

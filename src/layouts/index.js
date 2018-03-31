@@ -33,11 +33,11 @@ class TemplateWrapper extends React.Component {
         let scrollTop = event.srcElement.scrollingElement.scrollTop,
             sticky    = scrollTop > 100;
 
-        console.log("Sticky : ", sticky, scrollTop);
-
-        this.setState({
-          stickyMenu: sticky
-        });
+        if(this.state.stickyMenu != sticky) {
+            this.setState({
+              stickyMenu: sticky
+            });
+        }
     }
 
     render() {
