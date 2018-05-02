@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import Scrollspy from 'react-scrollspy'
 
+import config from '../utils/config'
+
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faBars from '@fortawesome/fontawesome-free-solid/faBars'
 
@@ -42,7 +44,7 @@ export default class Navigation extends React.Component {
 
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
-                <NavbarBrand href="#page-top">3rgo.me</NavbarBrand>
+                <NavbarBrand href="#page-top">{config.siteTitle}</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="navbar-toggle">
                     Menu&nbsp;
                     <FontAwesomeIcon icon={faBars} fixedWidth/>

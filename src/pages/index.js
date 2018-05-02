@@ -6,6 +6,8 @@ import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 
+import config from "../utils/config"
+
 
 const IndexPage = () => (
     <div>
@@ -14,8 +16,8 @@ const IndexPage = () => (
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-10 mx-auto">
-                            <h1 className="brand-heading">Romain GON&Ccedil;ALVES</h1>
-                            <p className="intro-text">Ingénieur en développement Web</p>
+                            <h1 className="brand-heading">{ config.siteTitle }</h1>
+                            <p className="intro-text">{ config.siteDescription }</p>
                             <a href="#about" className="btn btn-circle js-scroll-trigger">
 
                                 <FontAwesomeIcon icon={faAngleDoubleDown} />
@@ -30,7 +32,7 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>&Agrave; propos de moi</h2>
-                        <p>In esse enim sint deserunt aute dolore amet eu sint nulla ad velit officia officia nostrud sunt duis sit cillum et nostrud tempor exercitation ad laborum aliqua enim sit consectetur in cillum in labore ut qui pariatur do sed laboris enim deserunt cupidatat adipisicing occaecat nostrud nostrud sed ad ex consequat consectetur eu in adipisicing ut sit cupidatat do aliqua deserunt elit laborum in excepteur dolore occaecat et consequat laboris reprehenderit officia cupidatat sint labore pariatur occaecat sint ut pariatur dolor elit enim eu aliquip ullamco culpa excepteur commodo incididunt pariatur in et exercitation do irure consectetur proident laboris pariatur consectetur incididunt incididunt deserunt minim ut sint velit culpa qui quis cillum fugiat dolor non dolor pariatur laboris do ex laboris elit consequat minim id deserunt ut dolor exercitation aute tempor anim ex magna excepteur mollit dolore quis fugiat voluptate et mollit sint veniam duis dolor dolor aliquip velit ut minim in deserunt dolor culpa incididunt cupidatat et sint dolor sed in commodo esse enim minim cupidatat aliquip elit ea deserunt exercitation dolor ut aliquip cillum nulla dolore est in pariatur fugiat non dolore ullamco ea ea duis nostrud sed et irure eiusmod velit elit eu veniam do irure nostrud non ad eiusmod ea irure voluptate laboris ut dolore ad in in occaecat voluptate est deserunt dolore reprehenderit tempor sit ut ex eu deserunt cillum consequat do dolor occaecat amet in non ut do id sunt laborum ut non exercitation in in voluptate aliquip amet velit eiusmod amet sed voluptate.</p>
+                        <p dangerouslySetInnerHTML={{__html: config.content.about}}></p>
                     </div>
                 </div>
             </div>
