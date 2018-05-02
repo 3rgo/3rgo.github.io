@@ -186,6 +186,12 @@ a {
     &:nth-child(even) {
         background-color: #272727;
     }
+
+    &#about {
+        p {
+            text-align: justify
+        }
+    }
 }
 
 .btn {

@@ -32,7 +32,7 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>&Agrave; propos de moi</h2>
-                        <p dangerouslySetInnerHTML={{__html: config.content.about}}></p>
+                        { config.content.about.map ((sentence) => (<p>{sentence}</p>))}
                     </div>
                 </div>
             </div>
