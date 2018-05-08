@@ -6,8 +6,9 @@ import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 
-import config from "../utils/config"
+import TechItem from "../components/TechItem.js"
 
+import config from "../utils/config"
 
 const IndexPage = () => (
     <div>
@@ -42,75 +43,15 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>Technologies</h2>
-                        <div className="row">
-                            <div className="col-lg-4">
-                                <ul className="list-unstyled">
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media my-4">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-4">
-                                <ul className="list-unstyled">
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media my-4">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-4">
-                                <ul className="list-unstyled">
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media my-4">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                  <li className="media">
-                                    <img className="mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                                    <div className="media-body">
-                                      <h5 className="mt-0 mb-1">List-based media object</h5>
-                                    </div>
-                                  </li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        {
+                            config.content.technologies.map ((row, rowIdx) => (
+                                <div key={"row-" + rowIdx} className="d-flex justify-content-around">
+                                {
+                                    row.map((item, itemIdx) => (<TechItem key={"row-" + rowIdx + "-" + itemIdx} {...item} />))
+                                }
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
