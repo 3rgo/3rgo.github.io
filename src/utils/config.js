@@ -51,9 +51,7 @@ module.exports = {
             ],
             [
                 {name: "Git", logo: "git.svg", url: "https://git-scm.com", level: 4},
-                {name: "Mercurial", logo: "mercurial.svg", url: "https://www.mercurial-scm.org", level: 3}
-            ],
-            [
+                {name: "Mercurial", logo: "mercurial.svg", url: "https://www.mercurial-scm.org", level: 3},
                 {name: "Jenkins", logo: "jenkins.svg", url: "https://jenkins.io", level: 3},
                 {name: "Ansible", logo: "ansible.svg", url: "https://www.ansible.com", level: 2},
                 {name: "Webpack", logo: "webpack.svg", url: "https://webpack.js.org", level: 3}
@@ -71,9 +69,7 @@ module.exports = {
             ],
             [
                 {name: "JIRA", logo: "jira.svg", url: "https://www.atlassian.com/software/jira", level: 4},
-                {name: "Redmine", logo: "redmine.svg", url: "https://www.redmine.org", level: 4}
-            ],
-            [
+                {name: "Redmine", logo: "redmine.svg", url: "https://www.redmine.org", level: 4},
                 {name: "Microsoft Office", logo: "office.svg", url: "https://www.office.com/", level: 4}
             ],
         ]
