@@ -32,7 +32,7 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>&Agrave; propos de moi</h2>
-                        { config.content.about.map ((sentence) => (<p>{sentence}</p>))}
+                        { config.content.about.map ((sentence, stcIdx) => (<p key={stcIdx}>{sentence}</p>))}
                     </div>
                 </div>
             </div>

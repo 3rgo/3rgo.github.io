@@ -52,8 +52,8 @@ export default class Navigation extends React.Component {
                 <Collapse isOpen={this.state.isOpen} navbar id="navbarResponsive">
                     <Scrollspy items={ Object.keys(links) } currentClassName="active" componentTag={Nav} className="navbar-nav ml-auto" navbar>
                         {
-                            Object.keys(links).map(hash => (
-                                <NavItem>
+                            Object.keys(links).map((hash, hashIdx) => (
+                                <NavItem key={hashIdx}>
                                     <NavLink onClick={collapseNavbar} href={"#" + hash}>{links[hash]}</NavLink>
                                 </NavItem>
                             ))
