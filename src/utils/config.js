@@ -36,7 +36,7 @@ module.exports = {
                 {name: "PostgreSQL", logo: "pgsql.svg", url: "https://www.postgresql.org", level: 3},
                 {name: "SQLite", logo: "sqlite.svg", url: "https://www.sqlite.org", level: 5},
                 {name: "MongoDB", logo: "mongodb.svg", url: "https://www.mongodb.com", level: 2},
-                {name: "Microsoft SQL Server", logo: "mssql.svg", url: "https://www.microsoft.com/sql-server/", level: 3},
+                {name: "Microsoft SQL Server", logo: "mssql.svg", url: "https://www.microsoft.com/sql-server/", level: 3}
             ],
             [
                 {name: "HTML 5", logo: "html5.svg", url: "https://www.w3.org/html/", level: 5},
