@@ -45,7 +45,7 @@ const IndexPage = () => (
                         <h2>Technologies</h2>
                         {
                             config.content.technologies.map ((row, rowIdx) => (
-                                <div key={"row-" + rowIdx} className="d-flex justify-content-around">
+                                <div key={"row-" + rowIdx} className="d-flex justify-content-around techitem-row">
                                 {
                                     row.map((item, itemIdx) => (<TechItem key={"row-" + rowIdx + "-" + itemIdx} {...item} />))
                                 }

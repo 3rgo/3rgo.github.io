@@ -1,3 +1,5 @@
+$customGray: #555555;
+
 body {
     font-family: 'Biryani', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: relative;
@@ -184,7 +186,7 @@ a {
     }
 
     &:nth-child(even) {
-        background-color: #272727;
+        background-color: $customGray;
     }
 
     &#about {
@@ -269,16 +271,43 @@ img::-moz-selection {
     background: transparent;
 }
 
-#experiences .media {
-    border-bottom: 1px solid RoyalBlue;
-    margin-bottom: 40px;
+#experiences {
+    .media {
+        border-bottom: 1px solid RoyalBlue;
+        margin-bottom: 40px;
 
-    h1, h2, h3, h4, h5, h6 {
-        margin: 0 0 20px;
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 20px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: initial;
+        }
     }
+}
 
-    &:last-child {
-        border-bottom: none;
-        margin-bottom: initial;
+#technologies {
+    .techitem-row {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: initial;
+        }
+
+        .techitem {
+            .img-wrapper {
+                height: 150px;
+                width: 150px;
+                padding: 10px;
+                border: 1px solid white;
+                background-color: $customGray;
+
+                img {
+                    max-height: 130px;
+                    max-width: 130px;
+                }
+            }
+        }
     }
 }

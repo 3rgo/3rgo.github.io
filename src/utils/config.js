@@ -32,11 +32,11 @@ module.exports = {
                 {name: "MeteorJS", logo: "meteorjs.svg", url: "https://www.meteor.com", level: 2}
             ],
             [
-                {name: "MySQL / MariaDB", logo: "mysql.svg", url: "https://www.mysql.com", level: 4},
+                {name: "MySQLB", logo: "mysql.svg", url: "https://www.mysql.com", level: 4},
                 {name: "PostgreSQL", logo: "pgsql.svg", url: "https://www.postgresql.org", level: 3},
                 {name: "SQLite", logo: "sqlite.svg", url: "https://www.sqlite.org", level: 5},
                 {name: "MongoDB", logo: "mongodb.svg", url: "https://www.mongodb.com", level: 2},
-                {name: "Microsoft SQL Server", logo: "mssql.svg", url: "https://www.microsoft.com/sql-server/", level: 3}
+                {name: "MSSQL", logo: "mssql.svg", url: "https://www.microsoft.com/sql-server/", level: 3}
             ],
             [
                 {name: "HTML 5", logo: "html5.svg", url: "https://www.w3.org/html/", level: 5},
