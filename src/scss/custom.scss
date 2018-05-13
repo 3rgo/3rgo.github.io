@@ -296,9 +296,11 @@ img::-moz-selection {
         }
 
         .techitem {
+            width: 150px;
+
             .img-wrapper {
                 height: 150px;
-                width: 150px;
+                width: 100%;
                 padding: 10px;
                 border: 1px solid white;
                 background-color: $customGray;
@@ -306,6 +308,50 @@ img::-moz-selection {
                 img {
                     max-height: 130px;
                     max-width: 130px;
+                }
+            }
+
+            a {
+                font-size: 100%;
+                display: block;
+                width: 100%;
+            }
+
+            &.small {
+                width: 120px;
+
+                .img-wrapper {
+                    height: 120px;
+                    width: 100%;
+                    padding: 10px;
+
+                    img {
+                        max-height: 100px;
+                        max-width: 100px;
+                    }
+                }
+
+                a {
+                    font-size: 100%;
+                }
+            }
+
+            &.xsmall {
+                width: 70px;
+
+                .img-wrapper {
+                    height: 70px;
+                    width: 100%;
+                    padding: 5px;
+
+                    img {
+                        max-height: 60px;
+                        max-width: 60px;
+                    }
+                }
+
+                a {
+                    font-size: 90%;
                 }
             }
         }
