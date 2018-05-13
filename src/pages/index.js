@@ -6,7 +6,7 @@ import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 
-import TechItem from "../components/TechItem.js"
+import TechList from "../components/TechList.js"
 
 import config from "../utils/config"
 
@@ -43,15 +43,7 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>Technologies</h2>
-                        {
-                            config.content.technologies.map ((row, rowIdx) => (
-                                <div key={"row-" + rowIdx} className="d-flex justify-content-around techitem-row">
-                                {
-                                    row.map((item, itemIdx) => (<TechItem key={"row-" + rowIdx + "-" + itemIdx} {...item} />))
-                                }
-                                </div>
-                            ))
-                        }
+                        <TechList items={config.content.technologies} />
                     </div>
                 </div>
             </div>
