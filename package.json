@@ -18,7 +18,7 @@
     "react-helmet": "^5.2.0",
     "react-scrollspy": "^3.3.5",
     "react-stars": "^2.2.5",
-    "reactstrap": "next",
+    "reactstrap": "^6.0.0",
     "smoothscroll": "^0.4.0"
   },
   "keywords": [
