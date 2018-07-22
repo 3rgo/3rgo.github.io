@@ -28,7 +28,12 @@ export default class TechList extends React.Component {
     }
 
     componentWillMount() {
-        this.updateDimensions();
+        const isBrowser = typeof window !== 'undefined';
+        if(isBrowser){
+            this.updateDimensions();
+        } else {
+            this.setState({width: 1024, height: 768});
+        }
     }
 
     componentDidMount() {
