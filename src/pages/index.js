@@ -135,7 +135,7 @@ const IndexPage = () => (
         </section>
         <footer>
             <div className="container text-center">
-                <p className="lead">Copyright &copy; 3rgo.me {(new Date).getFullYear() != 2018 ? "2018 - "+(new Date).getFullYear() : "2018"}</p>
+                <p className="lead">Copyright &copy; rgoncalves.fr {(new Date).getFullYear() != 2018 ? "2018 - "+(new Date).getFullYear() : "2018"}</p>
                 <p className="font-weight-light">
                     <small>
                         Built with <a href="https://gatsbyjs.org/" target="_blank" rel="noopener">Gatsby</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> and <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>.<br/>
