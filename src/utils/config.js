@@ -76,13 +76,15 @@ module.exports = {
         experiences: [
             {
                 start: "Avril 2016",
-                end: null,
+                end: "maintenant",
                 name: "DECASOFT",
                 logo: "decasoft.png",
+                url: "http://www.decasoft.fr",
                 job: "Chef de projets / Responsable TMA",
                 history: [
                     {
                         client: "CCI Paris Île-de-France",
+                        url: "https://www.cci-paris-idf.fr",
                         logo: "ccip.png",
                         actions: [
                             "Pilotage d'une équipe de 5 à 8 personnes pour la maintenance d'un parc d'une trentaine de sites (PHP, Drupal 7/8 et Wordpress)",
@@ -97,6 +99,7 @@ module.exports = {
                     {
                         client: "Parkéon France",
                         logo: "parkeon.png",
+                        url: "https://www.parkeon.fr",
                         actions: [
                             "Réalisation des devis et suivi de la facturation",
                             "Développement d'applications \"machine à machine\" (PHP5, TDD et intégration continue)"
@@ -105,6 +108,7 @@ module.exports = {
                     {
                         client: "Altempo",
                         logo: "altempo.png",
+                        url: "http://www.altempo.com",
                         actions: [
                             "Réalisation des devis et suivi de la facturation",
                             "Suivi des développements (équipe de 1 à 3 personnes)",
@@ -123,8 +127,9 @@ module.exports = {
                 start: "Août 2011",
                 end: "Avril 2016",
                 name: "Airbus France",
+                url: "https://www.airbus.com",
                 logo: "airbus.svg",
-                job: "Ingénieur d'applications (en mission via Alten Sud-Ouest)",
+                job: "Ingénieur d'applications (en mission via ALTEN Sud-Ouest)",
                 history: [
                     "Développement d'outils Intranet de capitalisation de connaissances",
                     "Développement d'une API centrale (PHP 5, composants Symfony2)",

@@ -7,6 +7,7 @@ import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 
 import TechList from "../components/TechList.js"
+import ExperienceList from "../components/ExperienceList.js"
 
 import config from "../utils/config"
 
@@ -53,45 +54,7 @@ const IndexPage = () => (
                 <div className="row">
                     <div className="col-lg-10 mx-auto">
                         <h2>Exp&eacute;riences</h2>
-                        <div className="media">
-                            <img className="align-self-start mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                            <div className="media-body">
-                                <h5><strong>2016 - 2018</strong>&nbsp;Lorem ipsum aliqua quis nulla.</h5>
-                                <p className="lead">Fugiat esse ut enim quis reprehenderit in anim minim labore aliqua consectetur reprehenderit.</p>
-                                <p>Irure in ex ut in pariatur amet aliqua tempor in commodo sint officia exercitation exercitation elit aliqua occaecat sit et qui in fugiat amet aliquip enim cillum non commodo cupidatat ex mollit sunt dolor sit consequat voluptate esse sint eu amet nisi velit ullamco dolor amet consequat ad non sed voluptate culpa voluptate cupidatat veniam mollit eu qui in anim officia cupidatat sed esse amet in ut dolor mollit aliqua do anim ut proident aliqua est elit reprehenderit deserunt ea do ad cupidatat magna dolore id commodo excepteur incididunt irure in duis voluptate mollit dolore enim aliquip eu occaecat eiusmod cupidatat fugiat minim nulla aute mollit dolor amet aliqua velit nulla consequat officia eu ullamco elit..</p>
-                                <h6>Technologies</h6>
-                                <dl className="row">
-                                    <dt className="col-sm-3">Lorem ipsum.</dt>
-                                    <dd className="col-sm-9">
-                                        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                                        <p>Donec id elit non mi porta gravida at eget metus.</p>
-                                    </dd>
-                                    <dt className="col-sm-3">Lorem ipsum.</dt>
-                                    <dd className="col-sm-9">
-                                        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                                        <p>Donec id elit non mi porta gravida at eget metus.</p>
-                                    </dd>
-                                    <dt className="col-sm-3">Lorem ipsum.</dt>
-                                    <dd className="col-sm-9">
-                                        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                                        <p>Donec id elit non mi porta gravida at eget metus.</p>
-                                    </dd>
-                                    <dt className="col-sm-3">Lorem ipsum.</dt>
-                                    <dd className="col-sm-9">
-                                        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                                        <p>Donec id elit non mi porta gravida at eget metus.</p>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div className="media">
-                            <img className="align-self-start mr-3" src="http://via.placeholder.com/150" alt="Generic placeholder image"/>
-                            <div className="media-body">
-                                <h5><strong>2014 - 2016</strong>&nbsp;Lorem ipsum aliqua quis nulla.</h5>
-                                <p className="lead">Fugiat esse ut enim quis reprehenderit in anim minim labore aliqua consectetur reprehenderit.</p>
-                                <p>Irure in ex ut in pariatur amet aliqua tempor in commodo sint officia exercitation exercitation elit aliqua occaecat sit et qui in fugiat amet aliquip enim cillum non commodo cupidatat ex mollit sunt dolor sit consequat voluptate esse sint eu amet nisi velit ullamco dolor amet consequat ad non sed voluptate culpa voluptate cupidatat veniam mollit eu qui in anim officia cupidatat sed esse amet in ut dolor mollit aliqua do anim ut proident aliqua est elit reprehenderit deserunt ea do ad cupidatat magna dolore id commodo excepteur incididunt irure in duis voluptate mollit dolore enim aliquip eu occaecat eiusmod cupidatat fugiat minim nulla aute mollit dolor amet aliqua velit nulla consequat officia eu ullamco elit..</p>
-                            </div>
-                        </div>
+                        <ExperienceList items={config.content.experiences} />
                     </div>
                 </div>
             </div>

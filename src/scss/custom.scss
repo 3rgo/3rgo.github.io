@@ -284,6 +284,29 @@ img::-moz-selection {
             border-bottom: none;
             margin-bottom: initial;
         }
+
+        img {
+            max-height: 100px;
+            width: 100px;
+
+            &.main-logo {
+                max-height: 150px;
+                width: 150px;
+            }
+        }
+
+        .action-row {
+            border-bottom: 1px solid RoyalBlue;
+            margin-bottom: 40px;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        dd.orphan p {
+            margin-bottom: 10px;
+        }
     }
 }
 

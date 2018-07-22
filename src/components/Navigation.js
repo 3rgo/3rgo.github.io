@@ -38,6 +38,7 @@ export default class Navigation extends React.Component {
             'about' : 'À propos',
             'technologies' : 'Technologies',
             'experiences' : 'Expériences',
+            'training' : "Formation",
             'social' : 'Social'
         }
         let collapseNavbar = this.collapseNavbar
