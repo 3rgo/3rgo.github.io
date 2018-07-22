@@ -59,6 +59,50 @@ const IndexPage = () => (
                 </div>
             </div>
         </section>
+        <section id="training" className="content-section">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-10 mx-auto">
+                        <h2>Formation</h2>
+                        <dl>
+                        {
+                            config.content.training.map((trainingItem, idx) => (
+                                <div key={"training-"+idx} className="row">
+                                    <dt className="col-sm-3">
+                                        {trainingItem.period}
+                                    </dt>
+                                    <dd className="col-sm-9">
+                                        <p><strong>{trainingItem.title}</strong>, {trainingItem.location}</p>
+                                        { trainingItem.hasOwnProperty("spec") ? <p className="small">Sp&eacute;cialit&eacute; : {trainingItem.spec}</p> : "" }
+                                    </dd>
+                                </div>
+                            ))
+                        }
+                        </dl>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-10 mx-auto">
+                        <h2>Langues</h2>
+                        <dl>
+                        {
+                            config.content.languages.map((languageItem, idx) => (
+                                <div key={"language-"+idx} className="row">
+                                    <dt className="col-sm-3">
+                                        {languageItem.name}
+                                    </dt>
+                                    <dd className="col-sm-9">
+                                        <p>{languageItem.level}</p>
+                                        { languageItem.hasOwnProperty("misc") ? <p className="small">{languageItem.misc}</p> : "" }
+                                    </dd>
+                                </div>
+                            ))
+                        }
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="social" className="content-section text-center">
             <div className="container">
                 <div className="row">
