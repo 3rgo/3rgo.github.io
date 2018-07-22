@@ -72,6 +72,82 @@ module.exports = {
                 {name: "Redmine", logo: "redmine.svg", url: "https://www.redmine.org", level: 4},
                 {name: "Microsoft Office", logo: "office.svg", url: "https://www.office.com/", level: 4}
             ],
+        ],
+        experiences: [
+            {
+                start: "Avril 2016",
+                end: null,
+                name: "DECASOFT",
+                logo: "decasoft.jpg",
+                job: "Chef de projets / Responsable TMA",
+                history: [
+                    {
+                        client: "CCI Paris Île-de-France",
+                        logo: "ccip.png",
+                        actions: [
+                            "Pilotage d'une équipe de 5 à 8 personnes pour la maintenance d'un parc d'une trentaine de sites (PHP, Drupal 7/8 et Wordpress)",
+                            "Réalisation d'indicateurs mensuels et semestriels, et animation des comités de pilotage",
+                            "Réalisation des devis et suivi de la facturation",
+                            "Suivi qualité, veille sécurité, conseil sur l'orientation des développements",
+                            "Maintenance et développement sur les sujets DevOps (Jenkins, Ansible)",
+                            "Réalisation de spécifications fonctionnelles",
+                            "Développement Drupal 8"
+                        ]
+                    },
+                    {
+                        client: "Parkéon France",
+                        logo: "parkeon.png",
+                        actions: [
+                            "Réalisation des devis et suivi de la facturation",
+                            "Développement d'applications \"machine à machine\" (PHP5, TDD et intégration continue)"
+                        ]
+                    },
+                    {
+                        client: "Altempo",
+                        logo: "altempo.png",
+                        actions: [
+                            "Réalisation des devis et suivi de la facturation",
+                            "Suivi des développements (équipe de 1 à 3 personnes)",
+                            "Réalisation de user stories et de requirements techniques pour l'implémentation d'une pseudo-agilité"
+                        ]
+                    },
+                    "Entretiens techniques aux candidats potentiels",
+                    "Avant-vente avec les ingénieurs d'affaires",
+                    "Configuration et maintenance des serveurs",
+                    "Mise en place de process DevOps (GitLab, Jenkins, Ansible)",
+                    "Support technique aux développeurs de l'agence",
+                    "Gestion du matériel"
+                ]
+            },
+            {
+                start: "Août 2011",
+                end: "Avril 2016",
+                name: "Airbus France",
+                logo: "airbus.svg",
+                job: "Ingénieur d'applications (en mission via Alten Sud-Ouest)",
+                history: [
+                    "Développement d'outils Intranet de capitalisation de connaissances",
+                    "Développement d'une API centrale (PHP 5, composants Symfony2)",
+                    "Développement d'applications single-page Javascript (ExtJS 4.x) composées de graphiques et de vues complexes",
+                    "Développement d'une application d'ordonnancement (Ruby 2) afin de désynchroniser les traitements longs",
+                    "Import/Export de fichiers Excel complexes (Standard OpenXML)",
+                    "Participation aux phases de conception et d'arbitrage avec le client",
+                    "Process pseudo-AGILE à sprint mensuel (équipe de 3 personnes)",
+                    "Interface avec le client et les équipes off-shore pour le support opérationnel"
+                ]
+            }
+        ],
+        training: [
+            {period: "2017 & 2018", title: "Formations Git, Jenkins et Ansible", location: "Objis Formation, Paris (75)"},
+            {period: "2015", title: "Formation Symfony 2", location: "Orsys Formation, Toulouse (31)"},
+            {period: "2008 - 2011", title: "Ingénieur en Sciences Informatiques", location: "3iL, Limoges (87)", spec: "Développement Web avancé"},
+            {period: "2005 - 2008", title: "Classe préparatoire aux grandes écoles", location: "Lycée Alain-Fournier, Bourges (18)", spec: "Physique-Chimie"},
+            {period: "2005", title: "Baccalauréat Scientique", location: "Lycée Saint-Cyr, Issoudun (36)"}
+        ],
+        languages: [
+            {name: "Anglais", level: "Bilingue (Écrit/Oral/Technique)", misc: "TOEIC: 990/990 (Mai 2010)"},
+            {name: "Allemand", level: "Bases scolaires"},
+            {name: "Espagnol", level: "Bases scolaires"}
         ]
     }
 };
