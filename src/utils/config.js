@@ -78,7 +78,7 @@ module.exports = {
                 start: "Avril 2016",
                 end: null,
                 name: "DECASOFT",
-                logo: "decasoft.jpg",
+                logo: "decasoft.png",
                 job: "Chef de projets / Responsable TMA",
                 history: [
                     {
