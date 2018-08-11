@@ -29,7 +29,14 @@ export default class ExperienceItem extends React.Component {
                         {
                             this.props.history.map(function(item, itemIdx){
                                 if(typeof item === "string" || item instanceof String){
-                                    return (<dd key={"histItem-"+itemIdx} className="col-sm-12 orphan"><p>{item}</p></dd>)
+                                    return (
+                                        <div key={"histItem-"+itemIdx} className="row">
+                                            <dt className="d-none">&nbsp;</dt>
+                                            <dd key={"histItem-"+itemIdx} className="col-sm-12 orphan">
+                                                <p>{item}</p>
+                                            </dd>
+                                        </div>
+                                    )
                                 } else {
                                     return (
                                         <div key={"histItem-"+itemIdx} className="action-row row">
