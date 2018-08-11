@@ -118,7 +118,7 @@ a {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0 300px 0;
+    padding: 100px 0 500px 0;
     text-align: center;
     color: white;
     background: url("./../images/intro_bg_60.jpg") no-repeat bottom center scroll;
@@ -130,7 +130,7 @@ a {
 
     @media (min-width: 768px) {
         height: 100%;
-        padding: 200px 0 600px 0;
+        padding: 150px 0 600px 0;
     }
 
     .intro-body {
