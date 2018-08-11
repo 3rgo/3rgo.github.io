@@ -8,12 +8,22 @@ export default class ExperienceItem extends React.Component {
 
     render() {
         return (
-            <div className="media">
-                <a href={this.props.url} target="_blank" rel="noopener" className="d-flex img-wrapper justify-content-center align-content-center">
-                    <img className="align-self-start mr-3 main-logo" src={'static/logos/'+this.props.logo} alt={this.props.name+" logo"} title={this.props.name+" logo"}/>
-                </a>
-                <div className="media-body">
-                    <h5><strong>{this.props.start} - {this.props.end}</strong>&nbsp;:&nbsp;{this.props.name}</h5>
+            <div className="row experience-row">
+                <div className="col-md-3 col-sm-12">
+                    <a href={this.props.url} target="_blank" rel="noopener" className="d-flex img-wrapper justify-content-center align-content-center">
+                        <img className="align-self-start mr-3 main-logo" src={'static/logos/'+this.props.logo} alt={this.props.name+" logo"} title={this.props.name+" logo"}/>
+                    </a>
+                </div>
+
+                <div className="col-md-9 col-sm-12">
+                    <h5 className="d-none d-md-block">
+                        <strong>{this.props.start} - {this.props.end}</strong>&nbsp;:&nbsp;{this.props.name}
+                    </h5>
+                    <h5 className="d-md-none text-center mt-4">
+                        <strong>{this.props.start} - {this.props.end}</strong>
+                        <br/>
+                        {this.props.name}
+                    </h5>
                     <p className="lead">{this.props.job}</p>
                     <dl className="row">
                         {
@@ -23,7 +33,7 @@ export default class ExperienceItem extends React.Component {
                                 } else {
                                     return (
                                         <div key={"histItem-"+itemIdx} className="action-row row">
-                                            <dt className="col-sm-3">
+                                            <dt className="col-md-3 col-sm-12">
                                                 <div className="d-flex img-wrapper justify-content-center align-content-center text-center">
                                                     <a href={item.url} target="_blank" rel="noopener">
                                                         <img className="small" src={'static/logos/'+item.logo} alt={item.client+" logo"} title={item.client+" logo"} />
@@ -34,7 +44,7 @@ export default class ExperienceItem extends React.Component {
                                                     </a>
                                                 </div>
                                             </dt>
-                                            <dd className="col-sm-9">
+                                            <dd className="col-md-9 col-sm-12">
                                                 <ul>
                                                 {
                                                     item.actions.map((act, actIdx) => (

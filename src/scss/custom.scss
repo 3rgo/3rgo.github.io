@@ -272,8 +272,13 @@ img::-moz-selection {
 }
 
 #experiences {
-    .media {
-        border-bottom: 1px solid RoyalBlue;
+    .experience-row {
+        border-bottom: 10px solid RoyalBlue;
+
+        @media (min-width: 768px) {
+            border-width: 1px;
+        }
+
         margin-bottom: 40px;
 
         h1, h2, h3, h4, h5, h6 {
@@ -301,6 +306,10 @@ img::-moz-selection {
 
             li {
                 margin-bottom: 10px;
+            }
+
+            div.d-flex {
+                height: 100%;
             }
         }
 
