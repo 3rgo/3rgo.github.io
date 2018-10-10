@@ -48,7 +48,6 @@ export default class Navigation extends React.Component {
             'training' : 'Formation & Langues',
             'social' : 'Social'
         }
-        let handleLinkClick = this.handleLinkClick
 
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
