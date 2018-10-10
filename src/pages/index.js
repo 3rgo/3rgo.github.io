@@ -1,18 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faAngleDoubleDown from '@fortawesome/fontawesome-free-solid/faAngleDoubleDown'
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import Layout from "../components/layout.js"
 import TechList from "../components/TechList.js"
 import ExperienceList from "../components/ExperienceList.js"
 
 import config from "../utils/config"
 
-const IndexPage = () => (
-    <div>
+export default () => (
+    <Layout>
         <div className="intro">
             <div className="intro-body">
                 <div className="container">
@@ -21,8 +17,7 @@ const IndexPage = () => (
                             <h1 className="brand-heading">{ config.siteTitle }</h1>
                             <p className="intro-text">{ config.siteDescription }</p>
                             <a href="#about" className="btn btn-circle js-scroll-trigger">
-
-                                <FontAwesomeIcon icon={faAngleDoubleDown} />
+                                <FontAwesomeIcon icon="angle-double-down" />
                             </a>
                         </div>
                     </div>
@@ -111,20 +106,20 @@ const IndexPage = () => (
 
                         <ul className="list-inline banner-social-buttons">
                             <li className="list-inline-item">
-                                <a href="https://twitter.com/3rgo_" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <FontAwesomeIcon icon={faTwitter} fixedWidth/>
+                                <a href="https://twitter.com/3rgo_" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                    <FontAwesomeIcon icon={["fab", "twitter"]} fixedWidth/>
                                     <span className="network-name">Twitter</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://github.com/3rgo" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <FontAwesomeIcon icon={faGithub} fixedWidth/>
+                                <a href="https://github.com/3rgo" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                    <FontAwesomeIcon icon={["fab", "github"]} fixedWidth/>
                                     <span className="network-name">Github</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://www.linkedin.com/in/romain-gonçalves-83214423" target="_blank" rel="noopener" className="btn btn-default btn-lg">
-                                    <FontAwesomeIcon icon={faLinkedin} fixedWidth/>
+                                <a href="https://www.linkedin.com/in/romain-gonçalves-83214423" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                    <FontAwesomeIcon icon={["fab", "linkedin"]} fixedWidth/>
                                     <span className="network-name">LinkedIn</span>
                                 </a>
                             </li>
@@ -135,16 +130,14 @@ const IndexPage = () => (
         </section>
         <footer>
             <div className="container text-center">
-                <p className="lead">Copyright &copy; rgoncalves.fr {(new Date).getFullYear() != 2018 ? "2018 - "+(new Date).getFullYear() : "2018"}</p>
+                <p className="lead">Copyright &copy; rgoncalves.fr {(new Date()).getFullYear() !== 2018 ? "2018 - "+(new Date()).getFullYear() : "2018"}</p>
                 <p className="font-weight-light">
                     <small>
-                        Built with <a href="https://gatsbyjs.org/" target="_blank" rel="noopener">Gatsby</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> and <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>.<br/>
-                        Based on <a target="_blank" rel="noopener" href="https://github.com/BlackrockDigital/startbootstrap-grayscale">Greyscale theme by Start Bootstrap</a>
+                        Built with <a href="https://gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> and <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>.<br/>
+                        Based on <a target="_blank" rel="noopener noreferrer" href="https://github.com/BlackrockDigital/startbootstrap-grayscale">Greyscale theme by Start Bootstrap</a>
                     </small>
                 </p>
             </div>
         </footer>
-    </div>
+    </Layout>
 )
-
-export default IndexPage

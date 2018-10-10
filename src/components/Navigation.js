@@ -1,12 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink } from 'reactstrap'
 import Scrollspy from 'react-scrollspy'
 
 import config from '../utils/config'
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faBars from '@fortawesome/fontawesome-free-solid/faBars'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Navigation extends React.Component {
 
@@ -48,10 +46,10 @@ export default class Navigation extends React.Component {
                 <NavbarBrand href="#page-top">{config.siteTitle}</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="navbar-toggle">
                     Menu&nbsp;
-                    <FontAwesomeIcon icon={faBars} fixedWidth/>
+                    <FontAwesomeIcon icon="bars" fixedWidth/>
                 </NavbarToggler>
                 <Collapse isOpen={this.state.isOpen} navbar id="navbarResponsive">
-                    <Scrollspy items={ Object.keys(links) } currentClassName="active" componentTag="Nav" className="navbar-nav ml-auto" navbar>
+                    <Scrollspy items={ Object.keys(links) } currentClassName="active" componentTag="Nav" className="navbar-nav ml-auto">
                         {
                             Object.keys(links).map((hash, hashIdx) => (
                                 <NavItem key={hashIdx} tag="div">

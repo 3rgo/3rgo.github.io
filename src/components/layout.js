@@ -1,20 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 
 // Global smooth scrolling
-import smoothscroll from 'smoothscroll'
+//import smoothscroll from 'smoothscroll'
+
+// FontAwesome icons
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons/faAngleDoubleDown'
+import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import Navigation from '../components/Navigation'
 import SEO from '../components/SEO'
 
 import './../scss/index.scss'
 
-class TemplateWrapper extends React.Component {
+class Layout extends React.Component {
     constructor(props) {
         super(props);
 
         this.handleScroll = this.handleScroll.bind(this);
+
+        library.add(faBars, faAngleDoubleDown, faTwitter, faGithub, faLinkedin);
+        dom.watch();
 
         this.state = {
             stickyMenu: false
@@ -33,7 +41,7 @@ class TemplateWrapper extends React.Component {
         let scrollTop = event.srcElement.scrollingElement.scrollTop,
             sticky    = scrollTop > 100;
 
-        if(this.state.stickyMenu != sticky) {
+        if(this.state.stickyMenu !== sticky) {
             this.setState({
               stickyMenu: sticky
             });
@@ -46,15 +54,15 @@ class TemplateWrapper extends React.Component {
                 <SEO />
                 <Navigation sticky={this.state.stickyMenu} />
                 <div>
-                    {this.props.children()}
+                    {this.props.children}
                 </div>
             </div>
         )
     }
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+Layout.propTypes = {
+  children: PropTypes.array,
 }
 
-export default TemplateWrapper
+export default Layout

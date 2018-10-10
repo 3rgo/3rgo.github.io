@@ -1,16 +1,11 @@
 import React from 'react'
 
 export default class ExperienceItem extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="row experience-row">
                 <div className="col-md-3 col-sm-12">
-                    <a href={this.props.url} target="_blank" rel="noopener" className="d-flex img-wrapper justify-content-center align-content-center">
+                    <a href={this.props.url} target="_blank" rel="noopener noreferrer" className="d-flex img-wrapper justify-content-center align-content-center">
                         <img className="align-self-start mr-3 main-logo" src={'static/logos/'+this.props.logo} alt={this.props.name+" logo"} title={this.props.name+" logo"}/>
                     </a>
                 </div>
@@ -42,7 +37,7 @@ export default class ExperienceItem extends React.Component {
                                         <div key={"histItem-"+itemIdx} className="action-row row">
                                             <dt className="col-md-3 col-sm-12">
                                                 <div className="d-flex img-wrapper justify-content-center align-content-center text-center">
-                                                    <a href={item.url} target="_blank" rel="noopener">
+                                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                                                         <img className="small" src={'static/logos/'+item.logo} alt={item.client+" logo"} title={item.client+" logo"} />
                                                         <br/>
                                                         <div className="my-2">

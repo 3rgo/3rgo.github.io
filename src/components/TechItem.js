@@ -22,9 +22,9 @@ export default class TechItem extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const screenType = this.getScreenType(nextProps.screenWidth);
-        if(this.state.screenType != screenType){
+        if(this.state.screenType !== screenType){
             this.setState({
                 screenType: screenType
             });
@@ -33,9 +33,9 @@ export default class TechItem extends React.Component {
 
     render() {
         let cls = "d-flex flex-column techitem";
-        if(this.state.screenType == "xs"){
+        if(this.state.screenType === "xs"){
             cls += " mx-1 mb-0 xsmall";
-        } else if (this.state.screenType =="sm"){
+        } else if (this.state.screenType ==="sm"){
             cls += " mx-2 mb-0 small";
         } else {
             cls += " mx-3 mb-2";
@@ -47,7 +47,7 @@ export default class TechItem extends React.Component {
                     <img src={'static/logos/'+this.props.logo} alt={this.props.name+" logo"} title={this.props.name+" logo"}/>
                 </div>
                 <div className="px-0 text-center">
-                    <a href={this.props.url} target="_blank" rel="noopener">
+                    <a href={this.props.url} target="_blank" rel="noopener noreferrer">
                         {this.props.name}
                     </a>
                 </div>

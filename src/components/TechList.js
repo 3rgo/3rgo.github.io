@@ -27,7 +27,7 @@ export default class TechList extends React.Component {
         this.setState({width: window.innerWidth, height: window.innerHeight});
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         const isBrowser = typeof window !== 'undefined';
         if(isBrowser){
             this.updateDimensions();
