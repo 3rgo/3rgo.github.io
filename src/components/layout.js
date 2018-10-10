@@ -23,6 +23,19 @@ class Layout extends React.Component {
         library.add(faBars, faAngleDoubleDown, faTwitter, faGithub, faLinkedin);
         dom.watch();
 
+        this.state = {
+            stickyMenu: false
+        }
+    }
+
+    getCookie() {
+        var match = document.cookie.match(new RegExp('(^| )=([^;]+)'));
+        if (match) return match[2];
+        return false;
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
         window.cookieconsent.initialise({
             palette: {
                 popup: {
@@ -48,21 +61,6 @@ class Layout extends React.Component {
                 }
             }
         });
-        // const hasAcceptedCookies = getCookie
-
-        this.state = {
-            stickyMenu: false
-        }
-    }
-
-    getCookie() {
-        var match = document.cookie.match(new RegExp('(^| )=([^;]+)'));
-        if (match) return match[2];
-        return false;
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
