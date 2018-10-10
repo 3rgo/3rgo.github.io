@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Global smooth scrolling
-//import smoothscroll from 'smoothscroll'
-
 // FontAwesome icons
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'

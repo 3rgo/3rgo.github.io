@@ -2,6 +2,8 @@ import React from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink } from 'reactstrap'
 import Scrollspy from 'react-scrollspy'
 
+import smoothscroll from 'smoothscroll'
+
 import config from '../utils/config'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,7 +14,7 @@ export default class Navigation extends React.Component {
         super(props);
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
-        this.collapseNavbar = this.collapseNavbar.bind(this);
+        this.handleLinkClick = this.handleLinkClick.bind(this);
         this.state = {
             isOpen: false
         };
@@ -24,10 +26,17 @@ export default class Navigation extends React.Component {
         });
     }
 
-    collapseNavbar(){
+    handleLinkClick(event){
+        // Collapse navbar
         this.setState({
             isOpen: false
         });
+
+        const targetId = event.target.id.split('-').pop();
+        const scrollDestination = document.querySelector("#" + targetId);
+
+        event.preventDefault();
+        smoothscroll(scrollDestination);
     }
 
     render() {
@@ -39,7 +48,7 @@ export default class Navigation extends React.Component {
             'training' : 'Formation & Langues',
             'social' : 'Social'
         }
-        let collapseNavbar = this.collapseNavbar
+        let handleLinkClick = this.handleLinkClick
 
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
@@ -53,7 +62,7 @@ export default class Navigation extends React.Component {
                         {
                             Object.keys(links).map((hash, hashIdx) => (
                                 <NavItem key={hashIdx} tag="div">
-                                    <NavLink onClick={collapseNavbar} href={"#" + hash}>{links[hash]}</NavLink>
+                                    <NavLink onClick={this.handleLinkClick} id={"linkto-" + hash } href={"#" + hash}>{links[hash]}</NavLink>
                                 </NavItem>
                             ))
                         }
