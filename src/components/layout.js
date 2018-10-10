@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import {} from 'cookieconsent'
+import Helmet from "react-helmet";
 
 // FontAwesome icons
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
@@ -19,12 +18,14 @@ class Layout extends React.Component {
         super(props);
 
         this.handleScroll = this.handleScroll.bind(this);
+        this.displayCookieBanner = this.displayCookieBanner.bind(this);
 
         library.add(faBars, faAngleDoubleDown, faTwitter, faGithub, faLinkedin);
         dom.watch();
 
         this.state = {
-            stickyMenu: false
+            stickyMenu: false,
+            displayCookieBanner: false
         }
     }
 
@@ -36,31 +37,48 @@ class Layout extends React.Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
-        window.cookieconsent.initialise({
-            palette: {
-                popup: {
-                    background: "#252525",
-                    text: "#ffffff"
+        setTimeout(() => {if(window.cookieconsent && !this.state.displayCookieBanner){
+            this.setState({displayCookieBanner: true});
+            console.log('yes');
+            window.cookieconsent.initialise({
+                palette: {
+                    popup: {
+                        background: "#252525",
+                        text: "#ffffff"
+                    },
+                    button: {
+                        background: "#ffffff",
+                        text: "#252525"
+                    }
                 },
-                button: {
-                    background: "#ffffff",
-                    text: "#252525"
+                showLink: false,
+                law: {
+                    regionalLaw: false,
+                },
+                theme: "edgeless",
+                type: "opt-in",
+                content: {
+                    message: "Ce site utilise des cookies à des fins d'analyse du trafic uniquement.",
+                    deny: "Refuser",
+                    allow: "OK"
+                },
+                onStatusChange: function(status, chosenBefore){
+                    this.close();
+                    if(!this.hasConsented()){
+                        console.log('non con');
+                        if(window.gaOptout){
+                            window.gaOptout();
+                        }
+                    } else {
+                        console.log('con');
+                    }
                 }
-            },
-            showLink: false,
-            theme: "edgeless",
-            type: "opt-in",
-            content: {
-                message: "Ce site utilise des cookies à des fins d'analyse du trafic uniquement.",
-                deny: "Refuser",
-                allow: "Autoriser"
-            },
-            onStatusChange: function(status, chosenBefore){
-                if(status !== "allow"){
-                    window.gaOptout();
-                }
-            }
-        });
+            });
+        }}, 2000);
+    }
+
+    displayCookieBanner() {
+
     }
 
     componentWillUnmount() {
@@ -86,6 +104,10 @@ class Layout extends React.Component {
                 <div>
                     {this.props.children}
                 </div>
+                <Helmet>
+                    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+                </Helmet>
             </div>
         )
     }
