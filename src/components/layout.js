@@ -65,12 +65,13 @@ class Layout extends React.Component {
                 onStatusChange: function(status, chosenBefore){
                     this.close();
                     if(!this.hasConsented()){
-                        console.log('non con');
                         if(window.gaOptout){
                             window.gaOptout();
                         }
-                    } else {
-                        console.log('con');
+                        //Delete existing cookies
+                        document.cookie = '_ga=; Path=/; Domain=.rgoncalves.fr; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                        document.cookie = '_gat=; Path=/; Domain=.rgoncalves.fr; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                        document.cookie = '_gid=; Path=/; Domain=.rgoncalves.fr; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
                     }
                 }
             });
