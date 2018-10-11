@@ -50,7 +50,7 @@ export default class Navigation extends React.Component {
                 'technologies' : 'Technologies',
                 'experiences' : 'Expériences',
                 'training' : 'Formation & Langues',
-                'social' : 'Social'
+                'contact' : 'Contact'
             };
 
         return (

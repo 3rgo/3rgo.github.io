@@ -2,8 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from "../components/layout.js"
-import TechList from "../components/TechList.js"
+import EmailButton from "../components/EmailButton.js"
 import ExperienceList from "../components/ExperienceList.js"
+import TechList from "../components/TechList.js"
 
 import config from "../utils/config"
 
@@ -98,32 +99,38 @@ export default () => (
                 </div>
             </div>
         </section>
-        <section id="social" className="content-section text-center">
+        <section id="contact" className="content-section text-center">
             <div className="container">
-                <div className="row">
+                <div className="row mb-4">
                     <div className="col-lg-10 mx-auto">
-                        <h2>R&eacute;seaux Sociaux</h2>
+                        <h2 className="mb-2">R&eacute;seaux Sociaux</h2>
 
-                        <ul className="list-inline banner-social-buttons">
+                        <ul className="list-inline banner-social-buttons mt-0">
                             <li className="list-inline-item">
-                                <a href="https://twitter.com/3rgo_" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                <a href={ config.content.social.twitter } target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
                                     <FontAwesomeIcon icon={["fab", "twitter"]} fixedWidth/>
                                     <span className="network-name">Twitter</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://github.com/3rgo" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                <a href={ config.content.social.github} target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
                                     <FontAwesomeIcon icon={["fab", "github"]} fixedWidth/>
                                     <span className="network-name">Github</span>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://www.linkedin.com/in/romain-gonçalves-83214423" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
+                                <a href={ config.content.social.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-default btn-lg">
                                     <FontAwesomeIcon icon={["fab", "linkedin"]} fixedWidth/>
                                     <span className="network-name">LinkedIn</span>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-10 mx-auto">
+                        <h2 className="mb-2">E-Mail</h2>
+                        <EmailButton />
                     </div>
                 </div>
             </div>

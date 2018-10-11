@@ -4,8 +4,7 @@ module.exports = {
     siteUrl: "https://3rgo.me",
     siteImage: "preview.jpg",
     siteLanguage: "fr",
-    contactEmail: "contact@3rgo.me",
-    analyticsTrackingId: "UA-110088221-3",
+    contactEmail: "contact@rgoncalves.fr",
     content: {
         about: [
             "J'ai découvert l'informatique à l'âge de 12 ans à la bibliothèque municipale. À 14 ans, j'apprenais le HTML et le CSS afin de réaliser mes premières pages statiques, et à 17 ans j'y ajoutais le PHP pour dynamiser l'ensemble.",
@@ -153,6 +152,11 @@ module.exports = {
             {name: "Anglais", level: "Bilingue (Écrit/Oral/Technique)", misc: "TOEIC: 990/990 (Mai 2010)"},
             {name: "Allemand", level: "Bases scolaires"},
             {name: "Espagnol", level: "Bases scolaires"}
-        ]
+        ],
+        social: {
+            github: "https://github.com/3rgo",
+            linkedin: "https://www.linkedin.com/in/romain-gonçalves-83214423",
+            twitter: "https://twitter.com/3rgo_"
+        }
     }
 };
