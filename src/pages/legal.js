@@ -1,5 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Navigation from '../components/Navigation'
 import SEO from '../components/SEO'
