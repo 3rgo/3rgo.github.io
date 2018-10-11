@@ -18,7 +18,6 @@ class Layout extends React.Component {
         super(props);
 
         this.handleScroll = this.handleScroll.bind(this);
-        this.displayCookieBanner = this.displayCookieBanner.bind(this);
 
         library.add(faBars, faAngleDoubleDown, faTwitter, faGithub, faLinkedin);
         dom.watch();
@@ -76,10 +75,6 @@ class Layout extends React.Component {
                 }
             });
         }}, 2000);
-    }
-
-    displayCookieBanner() {
-
     }
 
     componentWillUnmount() {

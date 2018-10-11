@@ -32,6 +32,8 @@ export default class Navigation extends React.Component {
             isOpen: false
         });
 
+        if(this.props.minimal){ return true; }
+
         const targetId = event.target.id.split('-').pop();
         const scrollDestination = document.querySelector("#" + targetId);
 
@@ -40,18 +42,20 @@ export default class Navigation extends React.Component {
     }
 
     render() {
-        let cls = this.props.sticky ? "navbar-shrink" : ""
-        let links = {
-            'about' : 'À propos',
-            'technologies' : 'Technologies',
-            'experiences' : 'Expériences',
-            'training' : 'Formation & Langues',
-            'social' : 'Social'
-        }
+        let cls = (this.props.sticky || this.props.minimal) ? "navbar-shrink" : ""
+        let links = this.props.minimal ?
+            {'home' : 'Accueil'} :
+            {
+                'about' : 'À propos',
+                'technologies' : 'Technologies',
+                'experiences' : 'Expériences',
+                'training' : 'Formation & Langues',
+                'social' : 'Social'
+            };
 
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
-                <NavbarBrand href="#page-top">{config.siteTitle}</NavbarBrand>
+                <NavbarBrand href={this.props.minimal ? "/" : "#page-top"}>{config.siteTitle}</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="navbar-toggle">
                     Menu&nbsp;
                     <FontAwesomeIcon icon="bars" fixedWidth/>
@@ -61,7 +65,7 @@ export default class Navigation extends React.Component {
                         {
                             Object.keys(links).map((hash, hashIdx) => (
                                 <NavItem key={hashIdx} tag="div">
-                                    <NavLink onClick={this.handleLinkClick} id={"linkto-" + hash } href={"#" + hash}>{links[hash]}</NavLink>
+                                    <NavLink onClick={this.handleLinkClick} id={"linkto-" + hash } href={this.props.minimal ? "/" : "#" + hash}>{links[hash]}</NavLink>
                                 </NavItem>
                             ))
                         }
