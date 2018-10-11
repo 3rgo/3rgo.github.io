@@ -119,25 +119,32 @@ module.exports = {
                     "Configuration et maintenance des serveurs",
                     "Mise en place de process DevOps (GitLab, Jenkins, Ansible)",
                     "Support technique aux développeurs de l'agence",
-                    "Gestion du matériel"
+                    "Gestion du matériel informatique"
                 ]
             },
             {
                 start: "Août 2011",
                 end: "Avril 2016",
-                name: "Airbus France",
-                url: "https://www.airbus.com",
-                logo: "airbus.svg",
-                job: "Ingénieur d'applications (en mission via ALTEN Sud-Ouest)",
+                name: "ALTEN Sud-Ouest",
+                url: "http://www.alten.fr",
+                logo: "alten.svg",
+                job: "Ingénieur d'applications",
                 history: [
-                    "Développement d'outils Intranet de capitalisation de connaissances",
-                    "Développement d'une API centrale (PHP 5, composants Symfony2)",
-                    "Développement d'applications single-page Javascript (ExtJS 4.x) composées de graphiques et de vues complexes",
-                    "Développement d'une application d'ordonnancement (Ruby 2) afin de désynchroniser les traitements longs",
-                    "Import/Export de fichiers Excel complexes (Standard OpenXML)",
-                    "Participation aux phases de conception et d'arbitrage avec le client",
-                    "Process pseudo-AGILE à sprint mensuel (équipe de 3 personnes)",
-                    "Interface avec le client et les équipes off-shore pour le support opérationnel"
+                    {
+                        client: "Airbus France",
+                        url: "https://www.airbus.com",
+                        logo: "airbus.svg",
+                        actions: [
+                            "Développement d'outils Intranet de capitalisation de connaissances",
+                            "Développement d'une API centrale (PHP 5, composants Symfony2)",
+                            "Développement d'applications single-page Javascript (ExtJS 4.x) composées de graphiques et de vues complexes",
+                            "Développement d'une application d'ordonnancement (Ruby 2) afin de désynchroniser les traitements longs",
+                            "Import/Export de fichiers Excel complexes (Standard OpenXML)",
+                            "Participation aux phases de conception et d'arbitrage avec le client",
+                            "Process pseudo-AGILE à sprint mensuel (équipe de 3 personnes)",
+                            "Interface avec le client et les équipes off-shore pour le support opérationnel"
+                        ]
+                    }
                 ]
             }
         ],
