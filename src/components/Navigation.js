@@ -55,7 +55,7 @@ export default class Navigation extends React.Component {
 
         return (
             <Navbar light expand="lg" fixed="top" id="mainNav" className={cls}>
-                <NavbarBrand href={this.props.minimal ? "/" : "#page-top"}>{config.siteTitle}</NavbarBrand>
+                <NavbarBrand href={this.props.minimal ? "/" : "#pagetop"} onClick={this.handleLinkClick} id="linkto-pagetop">{config.siteTitle}</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="navbar-toggle">
                     Menu&nbsp;
                     <FontAwesomeIcon icon="bars" fixedWidth/>
