@@ -38,7 +38,8 @@ export default class Navigation extends React.Component {
         const scrollDestination = document.querySelector("#" + targetId);
 
         event.preventDefault();
-        smoothscroll(scrollDestination);
+
+        smoothscroll(scrollDestination, 500, (() => { window.location.hash = targetId; }));
     }
 
     render() {
