@@ -90,6 +90,7 @@ a {
     .navbar-brand {
         font-weight: 700;
         text-transform: initial;
+        padding-bottom: 0px;
     }
 
     a {
@@ -307,6 +308,11 @@ img::-moz-selection {
             border-bottom: 1px solid RoyalBlue;
             margin-bottom: 40px;
 
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: initial;
+            }
+
             li {
                 margin-bottom: 10px;
             }
@@ -318,6 +324,7 @@ img::-moz-selection {
 
         dd.orphan p {
             margin-bottom: 10px;
+            padding-left: 15px;
         }
     }
 }
