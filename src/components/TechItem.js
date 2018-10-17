@@ -4,14 +4,6 @@ import ReactStars from 'react-stars'
 
 export default class TechItem extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            screenType: this.getScreenType(props.screenWidth)
-        }
-    }
-
     getScreenType(width){
         if(width < 768){
             return 'xs';
@@ -22,20 +14,13 @@ export default class TechItem extends React.Component {
         }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        const screenType = this.getScreenType(nextProps.screenWidth);
-        if(this.state.screenType !== screenType){
-            this.setState({
-                screenType: screenType
-            });
-        }
-    }
-
     render() {
+        const screenType = this.getScreenType(this.props.screenWidth);
+
         let cls = "d-flex flex-column techitem";
-        if(this.state.screenType === "xs"){
+        if(screenType === "xs"){
             cls += " mx-1 mb-0 xsmall";
-        } else if (this.state.screenType ==="sm"){
+        } else if (screenType ==="sm"){
             cls += " mx-2 mb-0 small";
         } else {
             cls += " mx-3 mb-2";

@@ -7,6 +7,11 @@ export default class TechList extends React.Component {
     constructor(props){
         super(props);
         this.updateDimensions = this.updateDimensions.bind(this);
+
+        this.state = {
+            width: 1024,
+            height: 768
+        };
     }
 
     render() {
@@ -27,16 +32,12 @@ export default class TechList extends React.Component {
         this.setState({width: window.innerWidth, height: window.innerHeight});
     }
 
-    UNSAFE_componentWillMount() {
-        const isBrowser = typeof window !== 'undefined';
-        if(isBrowser){
+    componentDidMount() {
+        if(typeof window !== 'undefined'){
             this.updateDimensions();
         } else {
             this.setState({width: 1024, height: 768});
         }
-    }
-
-    componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
     }
 
