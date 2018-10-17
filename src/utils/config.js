@@ -56,10 +56,13 @@ module.exports = {
                 {name: "Webpack", logo: "webpack.svg", url: "https://webpack.js.org", level: 3}
             ],
             [
-                {name: "Apache", logo: "apache.svg", url: "https://httpd.apache.org", level: 4},
-                {name: "Nginx", logo: "nginx.svg", url: "https://nginx.org", level: 3},
                 {name: "PHP Unit", logo: "phpunit.svg", url: "https://phpunit.de", level: 4},
-                {name: "Jasmine", logo: "jasmine.svg", url: "https://jasmine.github.io", level: 2}
+                {name: "Jasmine", logo: "jasmine.svg", url: "https://jasmine.github.io", level: 2},
+                {name: "Guzzle", logo: "guzzle.png", url: "http://guzzlephp.org", level: 2}
+            ],
+            [
+                {name: "Apache", logo: "apache.svg", url: "https://httpd.apache.org", level: 4},
+                {name: "Nginx", logo: "nginx.svg", url: "https://nginx.org", level: 3}
             ],
             [
                 {name: "Windows", logo: "windows.svg", url: "https://www.microsoft.com/windows/", level: 5},
@@ -75,7 +78,7 @@ module.exports = {
         experiences: [
             {
                 start: "Avril 2016",
-                end: "maintenant",
+                end: "Septembre 2018",
                 name: "DECASOFT",
                 logo: "decasoft.png",
                 url: "http://www.decasoft.fr",
@@ -141,7 +144,7 @@ module.exports = {
                             "Développement d'une application d'ordonnancement (Ruby 2) afin de désynchroniser les traitements longs",
                             "Import/Export de fichiers Excel complexes (Standard OpenXML)",
                             "Participation aux phases de conception et d'arbitrage avec le client",
-                            "Process pseudo-AGILE à sprint mensuel (équipe de 3 personnes)",
+                            "Process pseudo-AGILE à sprint mensuel (équipe de 3 développeurs)",
                             "Interface avec le client et les équipes off-shore pour le support opérationnel"
                         ]
                     }
@@ -149,7 +152,8 @@ module.exports = {
             }
         ],
         training: [
-            {period: "2017 & 2018", title: "Formations Git, Jenkins et Ansible", location: "Objis Formation, Paris (75)"},
+            {period: "2018", title: "Formation Ansible", location: "Objis Formation, Paris (75)"},
+            {period: "2017", title: "Formation Git et Jenkins", location: "Objis Formation, Paris (75)"},
             {period: "2015", title: "Formation Symfony 2", location: "Orsys Formation, Toulouse (31)"},
             {period: "2008 - 2011", title: "Ingénieur en Sciences Informatiques", location: "3iL, Limoges (87)", spec: "Développement Web avancé"},
             {period: "2005 - 2008", title: "Classe préparatoire aux grandes écoles", location: "Lycée Alain-Fournier, Bourges (18)", spec: "Physique-Chimie"},
