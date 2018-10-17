@@ -103,6 +103,16 @@ export default () => (
             <div className="container">
                 <div className="row mb-4">
                     <div className="col-lg-10 mx-auto">
+                        <div>
+                            <a href="static/cv/CV-Romain_GONCALVES.pdf" className="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon="file-pdf" fixedWidth/>
+                                <span className="network-name">T&eacute;l&eacute;charger mon CV simplifié</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="row mb-4">
+                    <div className="col-lg-10 mx-auto">
                         <h2 className="mb-2">R&eacute;seaux Sociaux</h2>
 
                         <ul className="list-inline banner-social-buttons mt-0">
