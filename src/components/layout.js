@@ -4,10 +4,8 @@ import Helmet from "react-helmet";
 
 // FontAwesome icons
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faFilePdf } from '@fortawesome/free-solid-svg-icons'
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons/faAngleDoubleDown'
-import { faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faAngleDoubleDown, faBars, faEnvelope, faEnvelopeOpen, faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import Navigation from '../components/Navigation'
 import SEO from '../components/SEO'
@@ -20,7 +18,7 @@ class Layout extends React.Component {
 
         this.handleScroll = this.handleScroll.bind(this);
 
-        library.add(faBars, faAngleDoubleDown, faTwitter, faGithub, faLinkedin, faEnvelope, faEnvelopeOpen, faFilePdf);
+        library.add(faAngleDoubleDown, faBars, faEnvelope, faEnvelopeOpen, faFilePdf, faTwitter, faGithub, faLinkedin);
         dom.watch();
 
         this.state = {
