@@ -39,7 +39,6 @@ class Layout extends React.Component {
         window.addEventListener('scroll', this.handleScroll);
         setTimeout(() => {if(window.cookieconsent && !this.state.displayCookieBanner){
             this.setState({displayCookieBanner: true});
-            console.log('yes');
             window.cookieconsent.initialise({
                 palette: {
                     popup: {
